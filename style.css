@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+}
+body{
+    background-color: rgb(61, 60, 60);
+}
+.container{
+    width: 95%;
+    margin: auto;
+    /* border: 1px solid #fff; */
+}
+header{
+    position: fixed;
+    width: 100%;
+    padding: 10px;
+    height: 50px;
+    /* border: 1px solid; */
+    background-color: rgb(56, 55, 55);
+    color: blanchedalmond;
+    align-items: center;
+}
+header .logo{
+    display: inline-block;
+    font-size: 40px;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    /* border: 1px solid; */
+    cursor: pointer;
+    color: blanchedalmond;
+    font-weight: 900;
+    letter-spacing: 2px;
+    padding-top: 5px;
+}
+header ul{
+    float: right;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding-top: 4px;
+}
+header ul li{
+    display: inline-block;
+    padding: 8px 5px 8px 5px;
+}
+header ul li a{
+    color: blanchedalmond;
+    padding: 5px;
+}
+header ul li a:hover{
+    color: rgb(32, 138, 209);
+    transition: .3s;
+}
+#bars{
+    float: right;
+    font-size: 25px;
+    padding: 5px 20px 5px 5px;
+    display: none;
+}
+#cek{
+    display: none;
+}
+#cek:checked ~ .sidebar{
+    left: 0px;
+}
+#cek:checked ~ header #bars{
+    display: none;
+}
+
+/* sidebar */
+
+.sidebar{
+    position: fixed;
+    /* border: 1px solid #fff; */
+    width: 200px;
+    left: -300px;
+    height: 100vh;
+    margin-right: 90%;
+    z-index: 1;
+    background-color: rgb(56, 55, 55);
+    transition: .6s;
+    
+}
+i{
+    padding-right: 14px;
+}
+#close{
+    float: right;
+    padding: 15px;
+    font-size: 20px;
+    color: blanchedalmond;
+}
+.sidebar .logo{
+    font-size: 20px;
+    padding: 15px;
+    color: blanchedalmond;
+    font-weight: 900;
+}
+.sidebar ul{
+    margin-top: 20px;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+.sidebar ul li{
+    padding: 40px 15px 15px 15px;
+}   
+.sidebar ul li:hover{
+    background-color: rgb(104, 98, 98);
+}
+.sidebar ul li a{
+    color: blanchedalmond;
+}
+
+/* kepala */
+
+.kepala{
+}
+
+/* media screen */
+
+@media (max-width : 474px) {
+    header ul{
+        display: none;
+    }
+    header .logo{
+        font-size: 28px;
+        padding-top: 7px;
+    }
+    #bars{
+        display: block;
+    }
+}
